@@ -41,9 +41,9 @@ EXAMPLES
     ~> rego ./bar/ -- echo "@ was changed"
 
   # run a specific test whenever anything in lib, test, app, or config changes
-  #
+  # 
     ~> rego {lib,test,app,config} -- ruby -Itest ./test/units/foo_test.rb --name teh_test
-
+  _Note there can be no spaces between files. {lib, test} won't work_
   # run a specific test whenever it, or your app, has changed
   #
     ~> rego ./test -- ruby -Itest @
